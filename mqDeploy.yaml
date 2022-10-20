@@ -59,4 +59,4 @@ spec:
             - tls.key
             - tls.crt
   imagePullSecrets:
-    - name: ibm-entitlement-key
+    - name: default-dockercfg-k29sl
