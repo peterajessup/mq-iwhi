@@ -54,7 +54,7 @@ spec:
     keys:
       - name: label1
         secret:
-          secretName: mq2key
+          secretName: mqamskey
           items:
             - tls.key
             - tls.crt
