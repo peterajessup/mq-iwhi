@@ -4,19 +4,19 @@
     {
       "general":
       {
-        "description": "TLS CHANNEL for mq2"
+        "description": "TLS CHANNEL for Telstra Test QM"
       },
-      "name": "TLS2",
+      "name": "TLS3",
       "clientConnection":
       {
         "connection":
         [
           {
-            "host": "mq2-ibm-mq-qm-mq.itzroks-310000mg1w-5wkxit-6ccd7f378ae819553d37d5f2ee142bd6-0000.jp-tok.containers.appdomain.cloud",
+            "host": "router-default.cluster410-2-643d6b687ab93581d24420becac24aae-0000.au-syd.containers.appdomain.cloud",
             "port": 443 
           }
         ],
-        "queueManager": "QM1"
+        "queueManager": "QMAMS"
       },
       "transmissionSecurity":
       {
