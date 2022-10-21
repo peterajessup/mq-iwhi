@@ -28,7 +28,7 @@ spec:
       updateStrategy: RollingUpdate
       type: SingleInstance
    #   type: NativeHA
-    name: QM1
+    name: QMAMS
     mqsc:
     - configMap:
         name: ams1-mqsc
