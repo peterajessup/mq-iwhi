@@ -1,0 +1,30 @@
+{
+  "channel":
+  [
+    {
+      "general":
+      {
+        "description": "TLS CHANNEL for AMS Test QM"
+      },
+      "name": "TLS3",
+      "clientConnection":
+      {
+        "connection":
+        [
+          {
+            "host": "router-default.cluster410-2-643d6b687ab93581d24420becac24aae-0000.au-syd.containers.appdomain.cloud",
+            "port": 443 
+          }
+        ],
+        "queueManager": "QMAMS"
+      },
+      "transmissionSecurity":
+      {
+        "cipherSpecification": "TLS_RSA_WITH_AES_128_CBC_SHA256",
+        "certificateLabel": "label1",
+        "certificatePeerName": ""
+      },
+      "type": "clientConnection"
+    }
+  ]
+}
