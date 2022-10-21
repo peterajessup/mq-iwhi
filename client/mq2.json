@@ -4,7 +4,7 @@
     {
       "general":
       {
-        "description": "TLS CHANNEL for Telstra Test QM"
+        "description": "TLS CHANNEL for AMS Test QM"
       },
       "name": "TLS3",
       "clientConnection":
