@@ -59,4 +59,4 @@ spec:
             - tls.key
             - tls.crt
   imagePullSecrets:
-    - name: default-dockercfg-jpvv7
+    - name: default-dockercfg-b8gfw
