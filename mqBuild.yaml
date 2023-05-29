@@ -10,7 +10,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'demomq:v0.1'
+      name: 'demomq:v0.2'
   strategy:
     dockerStrategy:
       pullSecret:
