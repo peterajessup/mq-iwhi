@@ -11,7 +11,7 @@ spec:
     metric: VirtualProcessorCore
     use: Development
   queueManager:
-    image: image-registry.openshift-image-registry.svc:5000/mq/demomq:v0.1
+    image: image-registry.openshift-image-registry.svc:5000/mq/demomq:v0.2
     imagePullPolicy: Always
     storage:
       defaultClass: ibmc-block-gold
