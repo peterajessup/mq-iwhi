@@ -39,7 +39,7 @@ spec:
       containers:
         - env:
             - name: MQSNOAUT
-              value: 'yes'
+              value: 'no'
             - name: MQS_KEYSTORE_CONF
               value: '/run/keystore.conf'
             - name: AMQ_CLOUD_PAK
