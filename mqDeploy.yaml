@@ -42,6 +42,8 @@ spec:
               value: 'yes'
             - name: MQS_KEYSTORE_CONF
               value: '/run/keystore.conf'
+            - name: AMQ_CLOUD_PAK
+              value: true
           name: qmgr
   version: 9.3.2.0-r1
   web:
