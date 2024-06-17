@@ -41,18 +41,18 @@ spec:
             - name: MQSNOAUT
               value: 'no'
             - name: MQS_KEYSTORE_CONF
-              value: '/run/keystore.conf'
+              value: '/opt/mqm/keystore.conf'
             - name: AMQ_CLOUD_PAK
               value: 'true'
           name: qmgr
           volumeMounts:
         # name must match the volume name below
             - name: kdb
-              mountPath: /opt/mqm/amssecret
+              mountPath: /opt/mqm/ams
               readOnly: true
             - name:  conf
               - name: kdb
-              mountPath: /opt/mqm/amsconf
+              mountPath: /opt/mqm/ams
               readOnly: true
       volumes:
         - name: kdb
