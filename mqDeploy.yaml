@@ -53,7 +53,8 @@ spec:
             - name: conf
               mountPath: /opt/mqm/ams
               readOnly: true
-            
+            - name: data
+              mountPath: /mnt/mqm
       volumes:
         - name: kdb
           secret:
