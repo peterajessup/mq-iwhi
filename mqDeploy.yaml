@@ -26,7 +26,7 @@ spec:
         memory: 4Gi
     availability:
       updateStrategy: RollingUpdate
-       type: SingleInstance
+      type: SingleInstance
     #  type: NativeHA
     name: QMAMS
     mqsc:
