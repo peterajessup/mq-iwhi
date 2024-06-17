@@ -62,7 +62,7 @@ spec:
             secretName: ams-conf
   version: 9.3.4.0-r1
   web:
-    enabled: true
+    enabled: false
   mqDashboard: true
   pki:
     keys:
