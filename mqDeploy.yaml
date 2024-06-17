@@ -48,10 +48,10 @@ spec:
           volumeMounts:
         #name must match the volume name below
             - name: kdb
-              mountPath: /opt/mqm/amskey
+              mountPath: /var/mqm/amskey
               readOnly: true
             - name: conf
-              mountPath: /opt/mqm/amsconf
+              mountPath: /var/mqm/amsconf
               readOnly: true
       volumes:
         - name: kdb
