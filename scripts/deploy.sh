@@ -9,6 +9,8 @@ oc delete QueueManager mq-ams
 oc delete route mq-amsroute
 oc delete secret mqamskey
 oc delete configMap ams1-mqsc
+oc delete secret kdb-secret
+oc delete secret ams-conf
 #oc delete persistentvolumeclaim data-mq2-ibm-mq-0 
 set -e
 # Create the route and the keystore secret and mqsc configMap
