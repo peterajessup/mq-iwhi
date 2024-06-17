@@ -41,7 +41,7 @@ spec:
             - name: MQSNOAUT
               value: 'no'
             - name: MQS_KEYSTORE_CONF
-              value: '/opt/mqm/keystore.conf'
+              value: '/opt/mqm/ams/keystore.conf'
             - name: AMQ_CLOUD_PAK
               value: 'true'
           name: qmgr
