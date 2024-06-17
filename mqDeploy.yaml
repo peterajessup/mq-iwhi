@@ -60,7 +60,7 @@ spec:
         - name: conf
           secret:
             secretName: ams-conf
-  version: 9.3.2.0-r1
+  version: 9.3.4.0-r1
   web:
     enabled: true
   mqDashboard: true
