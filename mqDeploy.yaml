@@ -9,7 +9,7 @@ spec:
     license: L-VTPK-22YZPK
    # license: L-RJON-BN7PN3
     metric: VirtualProcessorCore
-    use: Development
+    use: Production
   queueManager:
     # image: image-registry.openshift-image-registry.svc:5000/mq/demomq:v0.2
     imagePullPolicy: Always
