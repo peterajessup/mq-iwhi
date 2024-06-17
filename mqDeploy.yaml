@@ -53,13 +53,17 @@ spec:
             - name: conf
               mountPath: /opt/mqm/ams
               readOnly: true
+            
       volumes:
         - name: kdb
           secret:
-            secretName: kdb-secret
+          secretName: kdb-secret
         - name: conf
           secret:
-            secretName: ams-conf
+          secretName: ams-conf
+        - name: data
+          persistentVolumeClaim:
+          claimName: data-mq1-ibm-mq-1
   version: 9.3.4.0-r1
   web:
     enabled: false
