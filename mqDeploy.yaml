@@ -47,16 +47,16 @@ spec:
           name: qmgr
           volumeMounts:
         #name must match the volume name below
-            - name: kdb
-              mountPath: /opt/mqm/ams
-              readOnly: true
+        #    - name: kdb
+        #      mountPath: /opt/mqm/ams
+        #      readOnly: true
             - name: conf
               mountPath: /opt/mqm/ams
               readOnly: true
       volumes:
-        - name: kdb
-          secret:
-          secretName: kdb-secret
+      #  - name: kdb
+      #    secret:
+      #    secretName: kdb-secret
         - name: conf
           secret:
           secretName: ams-conf
