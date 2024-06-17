@@ -65,9 +65,6 @@ spec:
   web:
     enabled: true
   mqDashboard: true
-  tracing:
-    enabled: false
-    namespace: od
   pki:
     keys:
       - name: label1
@@ -77,4 +74,4 @@ spec:
             - tls.key
             - tls.crt
   imagePullSecrets:
-    - name: default-dockercfg-4z4dx
+    - name: ibm-entitlement-key
