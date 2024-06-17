@@ -50,8 +50,7 @@ spec:
             - name: kdb
               mountPath: /opt/mqm/ams
               readOnly: true
-            - name:  conf
-              - name: kdb
+            - name: conf
               mountPath: /opt/mqm/ams
               readOnly: true
       volumes:
