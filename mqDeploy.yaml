@@ -45,26 +45,21 @@ spec:
             - name: AMQ_CLOUD_PAK
               value: 'true'
           name: qmgr
-         # volumeMounts:
+          volumeMounts:
         #name must match the volume name below
-         #   - name: kdb
-        #      mountPath: /opt/mqm/ams
-        #      readOnly: true
-        #    - name: conf
-        #      mountPath: /opt/mqm/ams
-       #       readOnly: true
-       #     - name: data
-       #       mountPath: /mnt/mqm
-    #  volumes:
-    #    - name: kdb
-    #      secret:
-     #     secretName: kdb-secret
-    #    - name: conf
-     #     secret:
-      #    secretName: ams-conf
-      #  - name: data
-      #    persistentVolumeClaim:
-      #    claimName: data-mq1-ibm-mq-1
+            - name: kdb
+              mountPath: /opt/mqm/ams
+              readOnly: true
+            - name: conf
+              mountPath: /opt/mqm/ams
+              readOnly: true
+      volumes:
+        - name: kdb
+          secret:
+          secretName: kdb-secret
+        - name: conf
+          secret:
+          secretName: ams-conf
   version: 9.3.4.0-r1
   web:
     enabled: false
