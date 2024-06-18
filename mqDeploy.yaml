@@ -50,16 +50,16 @@ spec:
            # - name: kdb
            #   mountPath: /tmp/amskey
            #   readOnly: true
-            - name: conf
-              mountPath: /tmp/amsconf
-              readOnly: true
+           # - name: conf
+           #   mountPath: /var/mqm/amsconf
+           #   readOnly: true
       volumes:
        # - name: kdb
        #   secret:
        #   secretName: kdb-secret
-        - name: conf
-          secret:
-          secretName: ams-conf
+       # - name: conf
+       #   secret:
+       #   secretName: ams-conf
   version: 9.3.4.0-r1
   web:
     enabled: false
