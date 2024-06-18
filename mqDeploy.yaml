@@ -41,7 +41,7 @@ spec:
             - name: MQSNOAUT
               value: 'no'
             - name: MQS_KEYSTORE_CONF
-              value: '/oetc/mqm/amsconf/keystore.conf'
+              value: '/var/mqm/amsconf/keystore.conf'
             - name: AMQ_CLOUD_PAK
               value: 'true'
           name: qmgr
