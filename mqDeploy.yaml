@@ -62,7 +62,7 @@ spec:
             secretName: ams-conf
             items:
               - key: keystore.conf
-              path: keystore.conf
+                path: keystore.conf
   version: 9.3.4.0-r1
   web:
     enabled: false
