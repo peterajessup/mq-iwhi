@@ -51,7 +51,7 @@ spec:
            #   mountPath: /tmp/amskey
            #   readOnly: true
             - name: conf
-              mountPath: /var/mqm/amsconf
+              mountPath: /run/amsconf
               readOnly: true
       volumes:
        # - name: kdb
