@@ -6,7 +6,7 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-VTPK-22YZPK
+    license: L-RJON-CD3JKX
    # license: L-RJON-BN7PN3
     metric: VirtualProcessorCore
     use: Production
@@ -65,10 +65,9 @@ spec:
                 items:
                   - key: keystore.conf
                     path: keystore.conf
-  version: 9.3.4.0-r1
+  version:  9.3.0.4-r1
   web:
     enabled: false
-  mqDashboard: true
   pki:
     keys:
       - name: label1
