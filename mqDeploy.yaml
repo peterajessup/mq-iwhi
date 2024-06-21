@@ -45,14 +45,16 @@ spec:
             - name: AMQ_CLOUD_PAK
               value: 'true'
           name: qmgr
+      initContainers:
+        - name: copy-qmgr-tls
+          image: busybox:latest
+          command: [ "sh", "-c", "mkdir -p /mnt/mqm/data/tls && cp /qmgr_tls/* /mnt/mqm/data/tls" ]
           volumeMounts:
-        #name must match the volume name below
-           # - name: kdb
-           #   mountPath: /tmp/amskey
-           #   readOnly: true
             - name: conf
-              mountPath: /run/amsconf
+              mountPath: "/qmgr_tls"
               readOnly: true
+            - name: data
+              mountPath: /mnt/mqm
       volumes:
        # - name: kdb
        #   secret:
