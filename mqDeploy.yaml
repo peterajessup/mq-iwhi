@@ -55,16 +55,16 @@ spec:
               readOnly: true
             - name: data
               mountPath: /mnt/mqm
-          volumes:
+      volumes:
        # - name: kdb
        #   secret:
        #   secretName: kdb-secret
-            - name: conf
-              secret:
-                secretName: ams-conf
-                items:
-                  - key: keystore.conf
-                    path: keystore.conf
+        - name: conf
+          secret:
+            secretName: ams-conf
+            items:
+              - key: keystore.conf
+                path: keystore.conf
   version:  9.3.0.4-r1
   web:
     enabled: false
