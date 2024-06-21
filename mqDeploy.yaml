@@ -65,6 +65,7 @@ spec:
             items:
               - key: keystore.conf
                 path: keystore.conf
+            defaultMode: 420
   version:  9.3.0.4-r1
   web:
     enabled: false
