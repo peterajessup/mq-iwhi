@@ -52,7 +52,7 @@ spec:
           volumeMounts:
             - name: conf
               mountPath: "/qmgr_tls"
-              readOnly: true
+             # readOnly: true
             - name: data
               mountPath: /mnt/mqm
       volumes:
