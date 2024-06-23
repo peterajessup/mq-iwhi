@@ -53,8 +53,8 @@ spec:
             - name: conf
               mountPath: "/qmgr_tls"
              # readOnly: true
-            - name: data
-              mountPath: /mnt/mqm
+         #   - name: data
+         #     mountPath: /mnt/mqm
       volumes:
        # - name: kdb
        #   secret:
