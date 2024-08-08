@@ -18,8 +18,8 @@ data:
     ***************************Definitions for the remote queue**********************
     DEFINE QREMOTE (PROTQ1) RNAME (PROTQ1) rqmname(QMAMS1) xmitq (QMAMS1XMIT)
     DEFINE CHANNEL ('TO.QMAMS1') CHLTYPE(SDR) DESCR('AMS Sender') TRPTYPE(TCP) XMITQ(QMAMS1XMIT) CONNAME('mq-ams1-ibm-mq(1414)') 
-    DEFINE QLOCAL(QMAMS1) DESCR('Transmission queue to QMAMS1') USAGE(XMITQ)
-    SET POLICY (PROTQ1) ENCALG(AES128) RECIP('CN=Base-Win2k8x64, O=IBM, C=US') KEYREUSE(1) ACTION(REPLACE)
+    DEFINE QLOCAL(QMAMS1XMIT) DESCR('Transmission queue to QMAMS1') USAGE(XMITQ)
+    SET POLICY (PROTQ1) ENCALG(AES128) RECIP('CN=ams, O=mqams, C=AU') KEYREUSE(1) ACTION(REPLACE)
     *********************************************************************************
     SET POLICY (IVT.P) ENCALG(AES128) RECIP('CN=Base-Win2k8x64, O=IBM, C=US') KEYREUSE(1) ACTION(REPLACE)
     DEFINE QLOCAL(REPLY1) DEFPSIST(YES) MAXDEPTH(5000000) REPLACE
