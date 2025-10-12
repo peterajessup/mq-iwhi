@@ -1,80 +1,41 @@
 apiVersion: mq.ibm.com/v1beta1
 kind: QueueManager
 metadata:
-  name: mq-ams
+  name: sydqm
+  annotations:
+    com.ibm.mq/write-defaults-spec: 'false'
   namespace: mq
 spec:
   license:
     accept: true
-    license: L-RJON-CD3JKX
-   # license: L-RJON-BN7PN3
-    metric: VirtualProcessorCore
+    license: L-QYVA-B365MB
     use: Production
-  queueManager:
-    # image: image-registry.openshift-image-registry.svc:5000/mq/demomq:v0.2
-    imagePullPolicy: Always
-    storage:
-      defaultClass: ocs-storagecluster-cephfs
-      queueManager:
-        type: persistent-claim
-    resources:
-      limits:
-        cpu: '0.3'
-        memory: 4Gi
-      requests:
-        cpu: '0.3'
-        memory: 4Gi
-    availability:
-      updateStrategy: RollingUpdate
-      type: SingleInstance
-    #  type: NativeHA
-    name: QMAMS
-    mqsc:
-    - configMap:
-        name: ams1-mqsc
-        items:
-        - ivt.mqsc
-  template:
-    pod:
-      containers:
-        - env:
-            - name: MQSNOAUT
-              value: 'no'
-            - name: MQS_KEYSTORE_CONF
-              value: '/var/mqm/amsconf/keystore.conf'
-            - name: AMQ_CLOUD_PAK
-              value: 'true'
-          name: qmgr
-      initContainers:
-        - name: copy-qmgr-tls
-          image: busybox:latest
-          command: [ "sh", "-c", "mkdir -p /mnt/mqm/data/tls && cp /qmgr_tls/* /mnt/mqm/data/tls" ]
-          volumeMounts:
-            - name: conf
-              mountPath: "/qmgr_tls"
-             # readOnly: true
-         #   - name: data
-         #     mountPath: /mnt/mqm
-        volumes:
-       # - name: kdb
-       #   secret:
-       #   secretName: kdb-secret
-          - name: conf
-            secret:
-              secretName: ams-conf
-              items:
-                - key: keystore.conf
-                  path: keystore.conf
-  version:  9.3.0.4-r1
   web:
     enabled: false
   pki:
     keys:
       - name: label1
         secret:
-          secretName: mqamskey
+          secretName: mqkey
           items:
             - tls.key
             - tls.crt
-  imagePullSecrets:
-    - name: ibm-entitlement-key
+  queueManager:
+    name: QM1
+    mqsc:
+    - configMap:
+        name: mq1-mqsc
+        items:
+        - ivt.mqsc
+    ini:
+    - configMap:
+        name: mq1-mqsc
+        items:
+        - mq.ini
+    availability:
+      type: NativeHA
+    storage:
+      queueManager:
+        type: persistent-claim
+      defaultClass: ocs-external-storagecluster-cephfs
+  version: 9.4.2.0-r1
