@@ -22,6 +22,11 @@ spec:
             - tls.crt
   queueManager:
     name: QM1
+    env:
+    - name: OTEL_EXPORTER_OTLP_HEADERS
+      value: authorization=mcsp-key apikey=azI6MGY3NDI0ZDQtMWI0Ny00YWEyLThjNzItNmEyMmI2NGEwZGZlOnJGcnBNczFEd29JbXBEMWQ0bHhWbnA3eDluSElaWmwvd21oRDd1UFFlaTQ9
+    - name: OTEL_RESOURCE_ATTRIBUTES
+      value: tId=dev3553628,cmp=IBM MQ
     mqsc:
     - configMap:
         name: mq1-mqsc
