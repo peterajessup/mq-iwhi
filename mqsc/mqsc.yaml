@@ -19,13 +19,13 @@ data:
     SET AUTHREC PROFILE('IVT.Q') PRINCIPAL('user1') OBJTYPE(QUEUE) AUTHADD(BROWSE,CHG,CLR,DLT,DSP,GET,INQ,PUT,PASSALL,PASSID,SET,SETALL,SETID)
     SET AUTHREC PROFILE('IVT.P') PRINCIPAL('user1') OBJTYPE(QUEUE) AUTHADD(BROWSE,CHG,CLR,DLT,DSP,GET,INQ,PUT,PASSALL,PASSID,SET,SETALL,SETID)
     SET AUTHREC PROFILE('IVT.R') PRINCIPAL('user1') OBJTYPE(QUEUE) AUTHADD(BROWSE,CHG,CLR,DLT,DSP,GET,INQ,PUT,PASSALL,PASSID,SET,SETALL,SETID)
- mq.ini: |-
-   Service:
-     Name=AuthorizationService
-     EntryPoints=14
-     SecurityPolicy=UserExternalApiExitCommon:
-   ApiExitCommon:
-     Sequence=100
-     Function=EntryPoint
-     Module=/var/mqm/exits64/mqtracingexit
+  mq.ini: |-
+    Service:
+      Name=AuthorizationService
+      EntryPoints=14
+      SecurityPolicy=UserExternalApiExitCommon:
+    ApiExitCommon:
+      Sequence=100
+      Function=EntryPoint
+      Module=/var/mqm/exits64/mqtracingexit
 Name=TracingApiExit
