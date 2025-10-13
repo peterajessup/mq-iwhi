@@ -19,5 +19,5 @@ oc create secret tls mqkey --cert=./tls/tls.crt --key=./tls/tls.key
 oc create -f mqsc/mqsc.yaml
 
 set -e
-oc apply -f mqeploy.yaml
+oc apply -f mqDeploy.yaml
 
