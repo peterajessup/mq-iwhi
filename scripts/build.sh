@@ -4,4 +4,4 @@ oc delete BuildConfig mqams
 
 oc create -f mqBuild.yaml
 
-oc start-build mqams --wait
+oc start-build mqiwhi --wait
