@@ -30,7 +30,7 @@ spec:
       value: tId=dev3553628,cmp=IBM MQ
     mqsc:
     - configMap:
-        name: mq1-mqsc
+        name: iwhi-mqsc
         items:
         - ivt.mqsc
     ini:
