@@ -27,5 +27,5 @@ data:
     ApiExitLocal:
       Sequence=100
       Function=EntryPoint
-      Module=/var/mqm/exits64/mqtracingexit
+      Module=/etc/mqm/exits64/mqtracingexit
       Name=TracingApiExit
