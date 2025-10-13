@@ -7,7 +7,7 @@ spec:
   host: tls1.chl.mq.ibm.com
   to:
     kind: Service
-    name: mq-ams-ibm-mq 
+    name: iwhiqm-ibm-mq
   port:
     targetPort: 1414
   tls:
