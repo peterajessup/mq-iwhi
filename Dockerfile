@@ -4,5 +4,5 @@ RUN mkdir /opt/mqm/exits64
 copy config/mqtracingexit.conf /opt/mqm/exits64
 copy config/mqtracingexit_r /opt/mqm/exits64
 copy config/tracelibrary.so /opt/mqm/exits64
-copy config/key.pem /opt/mqm/exits64
+copy config/cacert.pem /opt/mqm/exits64
 
