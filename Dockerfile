@@ -1,5 +1,6 @@
 FROM cp.icr.io/cp/ibm-mqadvanced-server-integration:9.4.2.0-r1
 # Copy in the tracing components
+RUN mkdir -p /etc/exits64
 copy config/mqtracingexit.conf /etc/exits64
 copy config/mqtracingexit_r /etc/exits64
 copy config/tracelibrary.so /etc/exits64
