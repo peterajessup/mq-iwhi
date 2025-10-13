@@ -1,7 +1,7 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: mqams
+  name: mqiwhi
 spec:
   source:
     git:
@@ -10,7 +10,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'mwiwhi:v0.1'
+      name: 'iwhiqm:v0.1'
   strategy:
     dockerStrategy:
       pullSecret:
