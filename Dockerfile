@@ -1,5 +1,7 @@
-FROM cp.icr.io/cp/ibm-mqadvanced-server-integration:9.3.1.0-r3
-# Copy in the keystore.conf
-copy conf/keystore.conf /run
+FROM cp.icr.io/cp/ibm-mqadvanced-server-integration:9.4.2.0-r1
+# Copy in the tracing components
+copy config/mqtracingexit.conf /var/mqm/exits64
+copy config/mqtracingexit_r /var/mqm/exits64
+copy config/tracelibrary.so /var/mqm/exits64
+copy config/key.pem /var/mqm/exits64
 
-copy web/mqwebuser.xml /etc/mqm/web/installations/Installation1/servers/mqweb
