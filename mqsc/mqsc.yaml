@@ -24,7 +24,7 @@ data:
       Name=AuthorizationService
       EntryPoints=14
       SecurityPolicy=UserExternal
-    ApiExitCommon:
+    ApiExitLocal:
       Sequence=100
       Function=EntryPoint
       Module=/var/mqm/exits64/mqtracingexit
