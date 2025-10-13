@@ -1,6 +1,6 @@
 oc project mq
 
-oc delete BuildConfig mqams
+oc delete BuildConfig mqiwhi
 
 oc create -f mqBuild.yaml
 
