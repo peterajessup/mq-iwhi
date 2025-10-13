@@ -23,7 +23,7 @@ data:
     Service:
       Name=AuthorizationService
       EntryPoints=14
-      SecurityPolicy=UserExternalApiExitCommon:
+      SecurityPolicy=UserExternal
     ApiExitCommon:
       Sequence=100
       Function=EntryPoint
