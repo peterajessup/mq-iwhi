@@ -15,8 +15,8 @@ set -e
 # Create the route and the keystore secret and mqsc configMap
 oc apply -f mq-amsRoute.yaml
 oc create secret tls mqamskey --cert=./tls/tls.crt --key=./tls/tls.key
-oc create secret generic kdb-secret --from-file=ams.kdb=./conf/ams.kdb --from-file=ams.sth=./conf/ams.sth 
-oc create secret generic ams-conf --from-file=keystore.conf=./conf/keystore.conf
+
+
 
 oc create -f mqsc/mqsc.yaml
 
