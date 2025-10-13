@@ -6,20 +6,18 @@ set +e
 # oc delete QueueManager mq-ams
 
 # Delete the route object and secret for the QueueManager keystore (if any), and the mqsc configMap
-oc delete route mq-amsroute
-oc delete secret mqamskey
-oc delete configMap ams1-mqsc
+oc delete route mq-route
+oc delete secret mqkey
+oc delete configMap iwhi-mqsc
 oc delete secret kdb-secret
 oc delete secret ams-conf
 set -e
 # Create the route and the keystore secret and mqsc configMap
-oc apply -f mq-amsRoute.yaml
-oc create secret tls mqamskey --cert=./tls/tls.crt --key=./tls/tls.key
-
-
+oc apply -f mq-iwhiRoute.yaml
+oc create secret tls mqkey --cert=./tls/tls.crt --key=./tls/tls.key
 
 oc create -f mqsc/mqsc.yaml
 
 set -e
-# oc apply -f mqeploy.yaml
-oc apply -f mqNoinitC.yaml
+oc apply -f mqeploy.yaml
+
