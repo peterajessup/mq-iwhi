@@ -13,7 +13,7 @@ oc delete secret kdb-secret
 oc delete secret ams-conf
 set -e
 # Create the route and the keystore secret and mqsc configMap
-oc apply -f mq-iwhiRoute.yaml
+oc apply -f mq-amsRoute.yaml
 oc create secret tls mqkey --cert=./tls/tls.crt --key=./tls/tls.key
 
 oc create -f mqsc/mqsc.yaml
