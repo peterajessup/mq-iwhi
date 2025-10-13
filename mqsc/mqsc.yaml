@@ -28,4 +28,4 @@ data:
       Sequence=100
       Function=EntryPoint
       Module=/var/mqm/exits64/mqtracingexit
-Name=TracingApiExit
+      Name=TracingApiExit
