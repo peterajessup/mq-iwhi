@@ -9,8 +9,7 @@ set +e
 oc delete route mq-route
 oc delete secret mqkey
 oc delete configMap iwhi-mqsc
-oc delete secret kdb-secret
-oc delete secret ams-conf
+
 set -e
 # Create the route and the keystore secret and mqsc configMap
 oc apply -f mq-amsRoute.yaml
