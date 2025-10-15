@@ -64,6 +64,7 @@
     <featureManager>
         <feature>appSecurity-2.0</feature>
         <feature>basicAuthenticationMQ-1.0</feature>
+		<feature>apiDiscovery-1.0</featue>
     </featureManager>
 
     <!-- 
