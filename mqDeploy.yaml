@@ -11,7 +11,7 @@ spec:
     license: L-QYVA-B365MB
     use: Production
   web:
-    enabled: true
+    enabled: false
   pki:
     keys:
       - name: label1
