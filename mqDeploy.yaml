@@ -8,10 +8,10 @@ metadata:
 spec:
   license:
     accept: true
-    license: L-QYVA-B365MB
+    license: L-NUUP-23NH8Y
     use: Production
   web:
-    enabled: false
+    enabled: true
   pki:
     keys:
       - name: label1
