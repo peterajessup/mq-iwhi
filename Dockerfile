@@ -8,4 +8,6 @@ copy config/tracelibrary.so /opt/mqm/exits64
 copy config/cacert.pem /opt/mqm/exits64
 # Copy in the web user configuration
 copy web/mqwebuser.xml /etc/mqm/web/installations/Installation1/servers/mqweb
+copy web/trust.jks /etc/mqm/web/installations/Installation1/servers/mqweb
+copy web/key.jks /etc/mqm/web/installations/Installation1/servers/mqweb
 
