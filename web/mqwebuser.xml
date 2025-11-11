@@ -180,12 +180,12 @@
 
     https://developer.ibm.com/wasdev/docs/configuring-ssl-liberty/
     -->
-    <!--
+    
     <keyStore id="defaultKeyStore" location="key.jks" type="JKS" password="password"/>
     <keyStore id="defaultTrustStore" location="trust.jks" type="JKS" password="password"/>
-    <ssl id="thisSSLConfig" clientAuthenticationSupported="true" keyStoreRef="defaultKeyStore" serverKeyAlias="default" trustStoreRef="defaultTrustStore" sslProtocol="TLSv1.2"/>
+    <ssl id="thisSSLConfig" clientAuthenticationSupported="true" keyStoreRef="defaultKeyStore" serverKeyAlias="label1" trustStoreRef="defaultTrustStore" sslProtocol="TLSv1.2"/>
     <sslDefault sslRef="thisSSLConfig"/>    
-    -->    
+        
     
     <!--
     Uncomment the following two variables, and adjust them, to change 
